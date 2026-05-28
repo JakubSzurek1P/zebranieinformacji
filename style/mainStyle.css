@@ -1,0 +1,199 @@
+body{
+    background-color: var(--backgroud);
+}
+a{
+    cursor: pointer;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#title{
+    display: inline;
+    margin: .7em auto;
+    text-decoration: none;
+    font-size: 3.5em;
+    color: var(--primary-text);
+    font-family: var(--font-headings), Arial, sans-serif;
+    place-self: center;
+    font-weight: bold;
+}
+#horizontal-menu{
+    place-self: center;
+    width: 100%;
+    justify-self: end;
+    border-top: 2px solid var(--borders-dividers);
+    border-bottom: 2px solid var(--borders-dividers);
+    background-color: var(--backgroud);
+
+}
+
+#horizontal-menu a, #horizontal-menu li{
+    display: inline-block;
+}
+
+#horizontal-menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#horizontal-menu a{
+    padding: .5em;
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-family: var(--font-body), Arial, sans-serif;
+    background-color: color(from var(--backgroud) srgb .2 .2 .2);
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+#horizontal-menu a:hover{
+    background-color: color(from var(--backgroud) srgb .3 .3 .3);
+}
+#horizontal-menu.stuck{
+    position: fixed;
+    top: 0;
+}
+main{
+    display: grid;
+    width: 80%;
+    margin: 1em auto 1em;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 1em;
+    grid-row-gap: .5em;
+
+}
+main.underStuck{
+    margin-top: 4em;
+}
+main > *{
+    box-shadow: rgba(0, 0, 0, .02) 5px 10px;
+}
+
+#vertical-menu{
+    background-color: color(from var(--backgroud) srgb .13 .13 .13);
+    border-radius: 10px;
+    padding: .5em;
+    grid-area: 1/1/1/1;
+    max-height: 9em;
+}
+
+#vertical-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+#vertical-menu li{
+    width: 100%;
+}
+#vertical-menu a{
+    display: inline-block;
+    padding: .4em;
+    border-radius: 5px;
+    background-color: color(from var(--backgroud) srgb .2 .2 .2);
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-family: var(--font-body), Arial, sans-serif;
+    width: calc(100% - .8em);
+    text-align: center;
+}
+
+#vertical-menu a:hover{
+    background-color: color(from var(--backgroud) srgb .3 .3 .3);
+}
+
+section{
+    color: var(--primary-text);
+    font-family: var(--font-body), Arial, sans-serif;
+    background-color: color(from var(--backgroud) srgb .13 .13 .13);
+    border-radius: 10px;
+    padding: 2em;
+}
+section h1{
+    font-family: var(--font-headings), Arial, sans-serif;
+    font-size: 2.2em;
+    margin-bottom: .5em;
+
+}
+section p{
+    text-align: justify;
+    text-indent: 2em;
+}
+#quizDiv{
+    color: var(--primary-text);
+    font-family: var(--font-body), Arial, sans-serif;
+    background-color: color(from var(--backgroud) srgb .13 .13 .13);
+    border-radius: 10px;
+    padding: 2em;
+    grid-area: 2/2/2/2;
+
+}
+#quizDiv .sprawdzSie{
+    display: block;
+    font-family: var(--font-headings), Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+div.pytanie .jakiePytanie{
+    display: block;
+    font-family: var(--font-headings), Arial, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+
+}
+#quizDiv form{
+    width: 60%;
+    margin: 0 auto;
+    background-color: color(from var(--backgroud) srgb .2 .2 .2);
+    padding: 1.3em;
+    border-radius: 10px;
+}
+#quizDiv form label{
+    display: block;
+    margin: .5em;
+    background-color: color(from var(--backgroud) srgb .3 .3 .3);
+    border-radius: 6px;
+    padding: .5em;
+    color: var(--primary-text);
+    font-family: var(--font-body), Arial, sans-serif;
+    width: calc(100% - 1em);
+}
+#quizDiv form button{
+    display: block;
+    background-color: #d26100;
+    box-shadow: none;
+    border: 2px solid var(--borders-dividers);
+    border-radius: 5px;
+    color: var(--secondary-text);
+    font-family: var(--font-body), Arial, sans-serif;
+    padding: .5em;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+}
+#quizDiv form button:active{
+    transform: scale(.95);
+}
+#quizDiv div:not(:first-of-type){
+    display: none;
+}
+#quizKoniec{
+    display: none;
+}
+footer{
+    border-top: 2px solid var(--borders-dividers);
+    text-align: center;
+}
+footer p{
+    color: var(--secondary-text);
+    font-family: var(--font-body), Arial, sans-serif;
+    margin: .6em;
+}
