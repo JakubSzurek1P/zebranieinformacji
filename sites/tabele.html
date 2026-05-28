@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#podstawy">Podstawowa struktura</a></li>
+            <li><a href="#naglowki">Nagłówki i podpisy</a></li>
+            <li><a href="#laczenie">Scalanie komórek</a></li>
+            <li><a href="#zaawansowane">Zaawansowane sekcje</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Tabele</h1>
+        
+        <h2 id="podstawy">Podstawowa struktura tabeli</h2>
+        <p>
+            HTML udostępnia dedykowany zestaw znaczników do prezentacji danych w formie struktury tabelarycznej. Głównym elementem kontenerowym jest znacznik <code>&lt;table&gt;</code>, który definiuje początek i koniec struktury danych na stronie internetowej. Wewnątrz tego obiektu dane organizowane są liniowo za pomocą wierszy. Każdy wiersz tabeli tworzony jest przy użyciu znacznika <code>&lt;tr&gt;</code>, będącego skrótem od angielskiego określenia table row. Z kolei wewnątrz wierszy umieszcza się pojedyncze komórki z danymi, do czego służy znacznik <code>&lt;td&gt;</code>, czyli table data. Każda komórka typu <code>&lt;td&gt;</code> domyślnie wyrównuje tekst do lewej strony i nie posiada żadnego wbudowanego pogrubienia. Prawidłowo skonstruowana podstawowa tabela musi zachowywać spójną liczbę komórek w każdym wierszu, aby układ kolumn był całkowicie symetryczny i czytelny dla przeglądarki. Wszelkie teksty i wartości liczbowe powinny znajdować się bezpośrednio w komórkach, a nie pomiędzy znacznikami strukturalnymi. Należy pamiętać, że domyślnie przeglądarki nie nakładają wyraźnych obramowań, dlatego czysty kod strukturalny służy wyłącznie do organizacji danych, a nie do ostatecznego stylizowania wizualnego. Komórki mogą zawierać dowolne inne elementy, jednak ich głównym celem jest czytelne prezentowanie powiązanych informacji.
+        </p>
+
+        <h2 id="naglowki">Nagłówki i podpis tabeli</h2>
+        <p>
+            Aby tabela była semantyczna i w pełni zrozumiała zarówno dla użytkowników, jak i dla robotów indeksujących czy czytników ekranu, kluczowe jest stosowanie komórek nagłówkowych. Służy do tego znacznik <code>&lt;th&gt;</code>, oznaczający table header. Komórki nagłówkowe wyróżniają się automatycznie pogrubionym tekstem oraz centralnym wyrównaniem zawartości wewnątrz przestrzeni komórki. Zazwyczaj umieszcza się je w pierwszym wierszu tabeli lub jako pierwszą komórkę każdego wiersza, definiując w ten sposób opisy kolumn lub wierszy. Atrybut <code>scope</code> może być opcjonalnie użyty w znaczniku <code>&lt;th&gt;</code> w celu jawnego wskazania, czy nagłówek dotyczy kolumny, czy wiersza, co ułatwia interpretację struktury przez oprogramowanie asystujące. Bardzo ważnym elementem uzupełniającym jest także znacznik <code>&lt;caption&gt;</code>, który pozwala na dodanie oficjalnego tytułu lub podpisu do całej tabeli. Znacznik <code>&lt;caption&gt;</code> musi być umieszczony jako pierwszy element bezpośrednio po otwarciu znacznika <code>&lt;table&gt;</code>. Taki zabieg znacząco poprawia dostępność witryny i ułatwia szybkie zorientowanie się w tematyce prezentowanych danych liczbowych lub tekstowych.
+        </p>
+
+        <h2 id="laczenie">Łączenie komórek kolumn i wierszy</h2>
+        <p>
+            Podczas tworzenia bardziej skomplikowanych zestawień danych często zachodzi potrzeba scalenia sąsiadujących komórek w poziomie lub w pionie. W języku HTML realizuje się to za pomocą specjalnych atrybutów dodawanych do znaczników <code>&lt;td&gt;</code> lub <code>&lt;th&gt;</code>. Do łączenia komórek w obrębie jednej linii, czyli w poziomie, służy atrybut <code>colspan</code>. Przyjmuje on jako wartość liczbę całkowitą określającą, ile kolumn dana komórka ma ostatecznie zająć. Na przykład zapis <code>colspan="2"</code> sprawi, że komórka rozciągnie się na przestrzeń dwóch standardowych kolumn, zastępując kolejną komórkę w tym wierszu. Z kolei do scalania komórek w pionie wykorzystuje się atrybut <code>rowspan</code>. Działa on analogicznie, powodując, że komórka rozciąga się w dół na określoną liczbę kolejnych wierszy. Używanie tych atrybutów wymaga od programisty dokładnego przeliczenia pozostałych komórek w sąsiednich wierszach, aby struktura tabeli nie uległa zniekształceniu ani przesunięciu, co mogłoby błędem popsuć domyślny układ całej strony internetowej.
+        </p>
+
+        <h2 id="zaawansowane">Zaawansowane sekcje i grupy kolumn</h2>
+        <p>
+            Dla bardzo dużych i rozbudowanych tabel specyfikacja HTML przewiduje podział struktury na trzy główne sekcje semantyczne: nagłówek, ciało oraz stopkę. Nagłówek tabeli grupuje się za pomocą znacznika <code>&lt;thead&gt;</code>, główną zawartość z danymi umieszcza się wewnątrz kontenera <code>&lt;tbody&gt;</code>, natomiast podsumowania lub stopki tabeli definiuje się w elemencie <code>&lt;tfoot&gt;</code>. Podział ten pozwala na logiczne odseparowanie danych od elementów informacyjnych. Co ciekawe, nowoczesne przeglądarki potrafią powtarzać nagłówek z sekcji <code>&lt;thead&gt;</code> na każdej stronie podczas drukowania wielostronicowego dokumentu sieciowego. Dodatkowo, do globalnego zarządzania właściwościami całych kolumn służą znaczniki <code>&lt;colgroup&gt;</code> oraz <code>&lt;col&gt;</code>. Kontener <code>&lt;colgroup&gt;</code> umieszcza się na samym początku tabeli, a znajdujące się w nim elementy <code>&lt;col&gt;</code> pozwalają na definiowanie cech dla poszczególnych kolumn lub ich całych grup za pomocą atrybutu <code>span</code>, co eliminuje konieczność powtarzania tych samych deklaracji w każdej komórce z osobna. Zapewnia to znacznie czystszy i bardziej czytelny kod źródłowy dokumentu.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Który znacznik definiuje cały kontener tabeli w HTML?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz">Znacznik &lt;tr&gt;</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz">Znacznik &lt;td&gt;</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz" class="correct">Znacznik &lt;table&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służy znacznik &lt;tr&gt;?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">Do definiowania komórki z danymi</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">Do tworzenia nowego wiersza tabeli</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">Do dodawania nagłówka kolumny</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Jaki znacznik domyślnie pogrubia i centruje tekst wewnątrz komórki?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz" class="correct">Znacznik &lt;th&gt;</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">Znacznik &lt;td&gt;</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz">Znacznik &lt;caption&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut pozwala na scalenie komórek w poziomie (obok siebie)?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz">rowspan</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz" class="correct">colspan</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz">span</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Gdzie powinien znajdować się znacznik &lt;caption&gt; wewnątrz tabeli?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz">Na samym końcu tabeli przed tagiem zamykającym</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">Jako pierwszy element bezpośrednio po otwarciu &lt;table&gt;</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">Wewnątrz sekcji &lt;tfoot&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut służy do pionowego scalania komórek (w dół)?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz" class="correct">rowspan</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz">colspan</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">v-align</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Którym znacznikiem otarczas się główną treść tabeli zawierającą właściwe komórki z danymi?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz">&lt;thead&gt;</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz">&lt;tfoot&gt;</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz" class="correct">&lt;tbody&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służą elementy &lt;colgroup&gt; oraz &lt;col&gt;?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz">Do grupowania wierszy w sekcje podsumowań</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz" class="correct">Do globalnego zarządzania właściwościami całych kolumn</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">Do dodawania podpisów i tytułów pod tabelami</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Jaki jest domyślny sposób wyrównania tekstu w standardowej komórce &lt;td&gt;?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz" class="correct">Do lewej strony</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz">Do środka</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz">Do prawej strony</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służy sekcja &lt;tfoot&gt; w strukturze tabeli?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz" class="correct">Do definiowania stopki i podsumowań danych tabeli</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz">Do umieszczania głównego tytułu tabeli</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz">Do wymuszenia ukrycia obramowania kolumn</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

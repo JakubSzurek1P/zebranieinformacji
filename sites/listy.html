@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#nieuporzadkowane">Listy nieuporządkowane</a></li>
+            <li><a href="#uporzadkowane">Listy uporządkowane</a></li>
+            <li><a href="#opisowe">Listy opisowe</a></li>
+            <li><a href="#zagniezdzanie">Zagnieżdżanie list</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Listy</h1>
+        
+        <h2 id="nieuporzadkowane">Listy nieuporządkowane i ich zastosowanie w strukturze dokumentu</h2>
+        <p>
+            Listy nieuporządkowane są jednym z najczęściej wykorzystywanych elementów strukturalnych w języku HTML, służącym do grupowania powiązanych ze sobą elementów, których kolejność nie ma fundamentalnego znaczenia dla zrozumienia całości przekazu. Głównym znacznikiem odpowiedzialnym za zainicjowanie takiej listy jest element <code>&lt;ul&gt;</code>, stanowiący skrót od angielskiego terminu unordered list. Każdy pojedynczy element wewnątrz tej struktury musi zostać bezwzględnie otoczony znacznikiem <code>&lt;li&gt;</code>, czyli list item. Przeglądarki internetowe domyślnie wyświetlają elementy listy nieuporządkowanej z charakterystycznymi czarnymi kropkami, zwanymi punktorami. Warto podkreślić, że sam znacznik <code>&lt;ul&gt;</code> nie powinien bezpośrednio zawierać zwykłego tekstu ani innych znaczków poza <code>&lt;li&gt;</code>. Jeśli zachodzi potrzeba umieszczenia akapitu lub obrazka, należy to zrobić wewnątrz elementu <code>&lt;li&gt;</code>. Listy tego typu są powszechnie stosowane nie tylko do tworzenia tradycyjnych spisów, ale również stanowią semantyczną podstawę dla budowy zaawansowanych menu nawigacyjnych, paneli bocznych czy list linków społecznościowych. Dzięki swojej elastyczności i prostej strukturze, element <code>&lt;ul&gt;</code> pozwala na bardzo precyzyjne i logiczne uporządkowanie treści na stronie internetowej, co ma ogromne znaczenie dla dostępności witryny dla osób korzystających z nowoczesnych czytników ekranu.
+        </p>
+
+        <h2 id="uporzadkowane">Listy uporządkowane oraz modyfikacja ich numeracji</h2>
+        <p>
+            W sytuacjach, gdy kolejność prezentowanych informacji jest kluczowa dla ich prawidłowego zrozumienia, na przykład podczas opisywania kroków przepisu kulinarnego, instrukcji instalacji oprogramowania czy klasyfikacji rankingowej, należy zastosować listę uporządkowaną. W języku HTML odpowiada za nią znacznik <code>&lt;ol&gt;</code>, będący skrótem od ordered list. Podobnie jak w przypadku listy nieuporządkowanej, jej bezpośrednimi dziećmi mogą być wyłącznie elementy <code>&lt;li&gt;</code>. Przeglądarki automatycznie nadają kolejnym elementom numery arabskie, zaczynając domyślnie od cyfry jeden. Twórca strony ma jednak możliwość modyfikacji tego zachowania za pomocą specjalnych atrybutów. Atrybut <code>type</code> pozwala zmienić styl numeracji na wielkie lub małe litery alfabetu, a także na cyfry rzymskie. Z kolei atrybut <code>start</code> umożliwia zdefiniowanie konkretnej liczby, od której lista ma rozpocząć odliczanie, co jest niezwykle przydatne przy dzieleniu jednej długiej listy na kilka osobnych sekcji w kodzie. Istnieje również atrybut logiczny <code>reversed</code>, który powoduje odwrócenie kolejności numeracji, sprawiając, że lista odlicza w dół. Korzystanie ze znacznika <code>&lt;ol&gt;</code> gwarantuje, że numeracja jest generowana automatycznie przez przeglądarkę, co całkowicie eliminuje ryzyko błędów przy ręcznym wpisywaniu kolejnych cyfr przez programistę.
+        </p>
+
+        <h2 id="opisowe">Listy opisowe jako narzędzie do prezentacji słowników i metadanych</h2>
+        <p>
+            Rzadziej spotykanym, lecz niezwykle potężnym i semantycznym narzędziem w języku HTML są listy opisowe, dawniej nazywane listami definicji. Służą one do przedstawiania par danych składających się z terminu oraz jego bezpośredniego opisu lub definicji. Cała struktura jest otwierana i zamykana za pomocą znacznika <code>&lt;dl&gt;</code>, czyli description list. Wewnątrz tego kontenera stosuje się dwa komplementarne znaczniki. Pierwszym z nich jest <code>&lt;dt&gt;</code>, czyli description term, w którym umieszcza się definiowane pojęcie, słowo kluczowe lub nazwę zmiennej. Drugim elementem jest <code>&lt;dd&gt;</code>, czyli description details, który zawiera właściwą treść opisu, definicję lub wartość przypisaną do danego terminu. Co ciekawe, specyfikacja HTML pozwala na przypisanie wielu znaczników <code>&lt;dd&gt;</code> do jednego <code>&lt;dt&gt;</code>, jeśli dane pojęcie ma kilka różnych znaczeń, lub odwrotnie – wiele terminów może dzielić jeden wspólny opis. Listy opisowe doskonale sprawdzają się przy tworzeniu słowniczków pojęć, sekcji najczęściej zadawanych pytań, specyfikacji technicznych produktów, gdzie podaje się cechę i jej wartość, a także do oznaczania metadanych artykułów, takich jak autor, data publikacji czy kategoria dokumentu.
+        </p>
+
+        <h2 id="zagniezdzanie">Zasady prawidłowego zagnieżdżania list wielu poziomów</h2>
+        <p>
+            Tworzenie wielopoziomowych struktur informacyjnych, takich jak rozbudowane spisy treści, mapy witryn czy wielopoziomowe menu nawigacyjne, wymaga poprawnego zagnieżdżania jednych list wewnątrz drugich. Kluczową i absolutnie fundamentalną zasadą walidacji HTML w tym procesie jest to, że nowa lista podrzędna – niezależnie od tego, czy jest to lista <code>&lt;ul&gt;</code> czy <code>&lt;ol&gt;</code> – musi zostać w całości umieszczona wewnątrz elementu <code>&lt;li&gt;</code> listy nadrzędnej. Bardzo częstym błędem popełnianym przez początkujących programistów jest otwieranie nowego znacznika <code>&lt;ul&gt;</code> bezpośrednio jako dziecka struktury nadrzędnej, pomiędzy dwoma elementami <code>&lt;li&gt;</code>, co jest całkowicie niedopuszczalne i prowadzi do poważnych błędów renderowania oraz problemów z dostępnością. Prawidłowo zagnieżdżona lista staje się integralną częścią elementu nadrzędnego, co oznacza, że znacznik <code>&lt;li&gt;</code> zamyka się dopiero po domknięciu całej listy wewnętrznej. Przeglądarki internetowe automatycznie aplikują dodatkowe wcięcia marginesów dla każdego kolejnego poziomu zagnieżdżenia, a w przypadku list nieuporządkowanych często zmieniają także domyślny kształt punktora z pełnej kropki na okrąg lub kwadrat, co znacząco ułatwia użytkownikowi wizualną orientację w hierarchii dokumentu.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Który znacznik inicjuje domyślną listę nieuporządkowaną w języku HTML?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz" class="correct">Znacznik &lt;ul&gt;</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz">Znacznik &lt;ol&gt;</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz">Znacznik &lt;li&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Jak brzmi pełne rozwinięcie angielskiego skrótu elementu &lt;li&gt;?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">List index</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">List item</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">Line item</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut znacznika &lt;ol&gt; pozwala na zmianę stylu numeracji (np. na cyfry rzymskie)?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz">Atrybut start</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">Atrybut reversed</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz" class="correct">Atrybut type</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Gdzie dokładnie należy umieścić zagnieżdżoną listę podrzędną, aby kod był zgodny z walidacją?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz" class="correct">Wewnątrz elementu &lt;li&gt; listy nadrzędnej</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz">Bezpośrednio w kontenerze &lt;ul&gt; pomiędzy znacznikami &lt;li&gt;</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz">Wewnątrz osobnego akapitu poza strukturą listy</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Jaki znacznik służy do otwarcia całej struktury listy opisowej?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz">Znacznik &lt;dt&gt;</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">Znacznik &lt;dl&gt;</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">Znacznik &lt;dd&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służy element &lt;dt&gt; w strukturze listy opisowej?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz">Do definiowania szczegółowego opisu wyjaśniającego</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz" class="correct">Do określenia pojęcia lub terminu, który jest opisywany</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">Do określenia liczby porządkowej elementu</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Co powoduje dodanie atrybutu logicznego reversed do znacznika &lt;ol&gt;?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz">Odwrócenie tekstu kotwicy w odbiciu lustrzanym</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz">Ukrycie wszystkich standardowych punktorów i liczb</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz" class="correct">Odliczanie generowanej automatycznie numeracji w dół</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Jaki jest domyślny kształt punktora dla pierwszego poziomu listy &lt;ul&gt;?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz">Pusty w środku okrąg</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz" class="correct">Pełna czarna kropka (dysk)</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">Mały czarny kwadrat</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Czy element &lt;ul&gt; może jako swoje bezpośrednie dziecko zawierać zwykły tekst bez &lt;li&gt;?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz" class="correct">Nie, bezpośrednimi dziećmi mogą być wyłącznie znaczniki &lt;li&gt;</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz">Tak, jest to w pełni zgodne z najnowszą specyfikacją HTML5</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz">Tak, pod warunkiem, że tekst nie zawiera spacji</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Jak poprawnie nakazać liście &lt;ol&gt; rozpoczęcie odliczania od wartości 5?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz" class="correct">&lt;ol start="5"&gt;</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz">&lt;ol type="5"&gt;</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz">&lt;ol value="5"&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

@@ -27,7 +27,7 @@ function isBlank(form) {
     return !odpowiedz;
 }
 forms.forEach((form) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
     while (true) {
         const e = yield waitForEvent(form, 'submit');
         if (!isBlank(form))
@@ -39,6 +39,7 @@ forms.forEach((form) => __awaiter(void 0, void 0, void 0, function* () {
         form.parentElement.nextElementSibling.style.display = 'block';
         if (!((_c = (_b = form.parentElement) === null || _b === void 0 ? void 0 : _b.nextElementSibling) === null || _c === void 0 ? void 0 : _c.classList.contains('pytanie')) && document.getElementById('liczbaPunktow')) {
             document.getElementById('liczbaPunktow').textContent = String(poprawneOdpowiedzi);
+            ((_d = document.getElementById('liczbaPunktow')) === null || _d === void 0 ? void 0 : _d.parentElement).style.color = `hsl(${(poprawneOdpowiedzi / 10) * 120}, 100%, 50%)`;
         }
     }
 }));

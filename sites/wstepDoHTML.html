@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#definicja-i-historia">Definicja i historia</a></li>
+            <li><a href="#znacznik-a-programowanie">Znaczniki a programowanie</a></li>
+            <li><a href="#interpretacja-kodu">Interpretacja kodu</a></li>
+            <li><a href="#organizacje-standardow">Organizacje standardów</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Wstęp do HTML</h1>
+        
+        <h2 id="definicja-i-historia">Czym jest język HTML i skąd się wziął?</h2>
+        <p>
+            Język HTML, czyli HyperText Markup Language (Hipertekstowy Język Znaczników), to absolutny fundament każdej strony internetowej, jaką odwiedzamy w sieci. Aby dobrze zrozumieć jego działanie, warto rozbić tę nazwę na dwa główne człony. Słowo „hipertekst” odnosi się do systemu dokumentów, które są ze sobą powiązane za pomocą odsyłaczy, czyli popularnych linków. Dzięki temu użytkownik nie musi czytać informacji liniowo, od deski do deski, ale może swobodnie przeskakiwać między powiązanymi tematami. Z kolei „język znaczników” oznacza, że kod źródłowy składa się ze specjalnych etykiet, które informują program odczytujący, jak ma interpretować i formatować dany fragment tekstu.
+        </p>
+        <p>
+            Historia HTML-a rozpoczyna się na przełomie lat 80. i 90. XX wieku w Europejskiej Organizacji Badań Jądrowych (CERN) w Genewie. Brytyjski naukowiec Tim Berners-Lee poszukiwał skutecznego sposobu na łatwe dzielenie się dokumentami naukowymi i wynikami badań między fizykami z całego świata. W 1989 roku przedstawił on projekt globalnego systemu hipertekstowego, który później stał się znaną nam siecią World Wide Web (WWW). Pierwsza oficjalna specyfikacja języka, zawierająca zaledwie kilkanaście podstawowych tagów, ujrzała światło dzienne w 1991 roku. Od tamtego momentu HTML przeszedł ogromną ewolucję – od prostego narzędzia do wyświetlania surowego tekstu z odnośnikami, przez wersje HTML 2.0, 3.2 oraz przełomowy standard HTML 4.01, aż po współczesny HTML5, który zrewolucjonizował sieć, wprowadzając natywną obsługę nowoczesnych aplikacji internetowych bez potrzeby stosowania zewnętrznych wtyczek.
+        </p>
+
+        <h2 id="znacznik-a-programowanie">Język znaczników kontra języki programowania</h2>
+        <p>
+            Wielu początkujących twórców stron internetowych popełnia podstawowy błąd logiczny, nazywając HTML językiem programowania. W rzeczywistości HTML ma zupełnie inny charakter – jest językiem deklaratywnym służącym do opisu struktury informacji. W przeciwieństwie do prawdziwych języków programowania, takich jak C++ czy Python, HTML nie posiada instrukcji warunkowych, pętli, zmiennych ani zaawansowanych mechanizmów umożliwiających wykonywanie operacji matematycznych czy logicznych. 
+        </p>
+        <p>
+            Pisząc kod w HTML, nie instruujemy komputera, jakie kroki algorytmiczne ma wykonać po kolei, lecz jedynie deklarujemy, czym jest dany element w strukturze dokumentu tekstowego. Na przykład używając kodu <code>&lt;p&gt;</code> informujemy system, że dany fragment stanowi akapit tekstu, a za pomocą znacznika <code>&lt;h1&gt;</code> wskazujemy główny tytuł sekcji. HTML określa wyłącznie semantykę i architekturę zawartości witryny internetowej, podczas gdy logika biznesowa, dynamiczne przetwarzanie danych czy interakcja z użytkownikiem realizowane są przez skrypty JavaScript lub programy działające po stronie serwera.
+        </p>
+
+        <h2 id="interpretacja-kodu">Jak przeglądarki internetowe interpretują kod HTML?</h2>
+        <p>
+            Aby strona napisana w HTML-u stała się widoczna dla człowieka w przyjaznej, graficznej formie, potrzebny jest pośrednik w postaci przeglądarki internetowej. Programy takie jak Google Chrome, Mozilla Firefox czy Safari posiadają wbudowane specjalne silniki renderujące, których zadaniem jest parsowanie, czyli szczegółowa analiza kodu źródłowego dostarczonego przez serwer. Przeglądarka przetwarza plik HTML linijka po linijce, od samej góry do dołu. Na podstawie odczytanych znaczników tworzy w pamięci operacyjnej komputera wewnętrzną strukturę drzewiastą zwaną DOM (Document Object Model). Każdy tag, taki jak na przykład <code>&lt;main&gt;</code> czy <code>&lt;section&gt;</code>, staje się osobnym obiektem, czyli węzłem w tym drzewie.
+        </p>
+        <p>
+            Co ciekawe, oficjalna specyfikacja HTML-a wymusza na przeglądarkach ogromną tolerancję na błędy popełniane przez twórców kodu. Jeśli programista zapomni zamknąć jakiś znacznik lub zrobi przypadkową literówkę, silnik renderujący przeglądarki nie przerwie nagle pracy i nie wyświetli krytycznego komunikatu o błędzie składni (ang. syntax error), tak jak stałoby się to w kompilatorze języka programowania. Zamiast tego algorytmy przeglądarki spróbują samodzielnie domyślić się intencji autora i wyrenderują stronę najlepiej, jak potrafią, automatycznie domykając brakujące elementy w strukturze DOM, by użytkownik końcowy nie zobaczył uszkodzonego widoku.
+        </p>
+
+        <h2 id="organizacje-standardow">Rola organizacji standaryzujących: W3C oraz WHATWG</h2>
+        <p>
+            Rozwój języka HTML nie odbywa się w sposób chaotyczny, lecz jest ściśle kontrolowany przez międzynarodowe organizacje standaryzujące, które dbają o spójność sieci. Przez wiele lat główną pieczę nad rozwojem technologii sieciowych sprawowało konsorcjum W3C (World Wide Web Consortium), założone w 1994 roku przez samego twórcę sieci, Tima Berners-Lee. W3C dbało o to, aby standardy były jednolite dla wszystkich producentów oprogramowania komputerowego. Jednak na początku XXI wieku W3C zaczęło mocno forsować standard XHTML, który miał być rygorystyczną wersją HTML-a opartą na regułach języka XML. Spotkało się to z dużym oporem producentów przeglądarek, dla których restrykcyjne odrzucanie stron internetowych z drobnymi błędami składniowymi było całkowicie nieakceptowalne z punktu widzenia wygody użytkowników.
+        </p>
+        <p>
+            W 2004 roku firmy Apple, Mozilla oraz Opera powołały do życia niezależną grupę roboczą o nazwie WHATWG (Web Hypertext Application Technology Working Group). Członkowie WHATWG postanowili rozwijać klasyczny HTML w kierunku wsparcia dla dynamicznych i nowoczesnych aplikacji webowych, co ostatecznie doprowadziło do kapitulacji projektu XHTML i narodzin rewolucyjnego standardu HTML5. Obecnie to właśnie WHATWG w pełni zarządza oficjalnym standardem jako tak zwany „HTML Living Standard”. Jest to żywy dokument specyfikacji, który nie posiada już kolejnych stałych numerów wersji (jak HTML6), lecz jest stale, płynnie aktualizowany i dostosowywany do dynamicznie zmieniających się potrzeb nowoczesnego internetu.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Co dokładnie oznacza rozwinięcie skrótu HTML?</span>
+                <label for="odpowiedz1.1"><input type="radio" id="odpowiedz1.1" name="odpowiedz" class="correct">HyperText Markup Language</label>
+                <label for="odpowiedz1.2"><input type="radio" id="odpowiedz1.2" name="odpowiedz">HighText Marking Language</label>
+                <label for="odpowiedz1.3"><input type="radio" id="odpowiedz1.3" name="odpowiedz">HyperTool Management Line</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Kto jest uznawany za głównego twórcę i pomysłodawcę języka HTML?</span>
+                <label for="odpowiedz2.1"><input type="radio" id="odpowiedz2.1" name="odpowiedz">Brendan Eich</label>
+                <label for="odpowiedz2.2"><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">Tim Berners-Lee</label>
+                <label for="odpowiedz2.3"><input type="radio" id="odpowiedz2.3" name="odpowiedz">Håkon Wium Lie</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Dlaczego HTML nie jest klasyfikowany jako język programowania?</span>
+                <label for="odpowiedz3.1"><input type="radio" id="odpowiedz3.1" name="odpowiedz">Ponieważ nie pozwala na stylowanie elementów graficznych strony</label>
+                <label for="odpowiedz3.2"><input type="radio" id="odpowiedz3.2" name="odpowiedz">Ponieważ kod źródłowy nie jest zapisywany w plikach tekstowych</label>
+                <label for="odpowiedz3.3"><input type="radio" id="odpowiedz3.3" name="odpowiedz" class="correct">Ponieważ jest językiem deklaratywnym, nie posiada instrukcji logicznych ani pętli</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">W której organizacji naukowej narodził się pomysł stworzenia sieci WWW i języka HTML?</span>
+                <label for="odpowiedz4.1"><input type="radio" id="odpowiedz4.1" name="odpowiedz" class="correct">W instytucie CERN</label>
+                <label for="odpowiedz4.2"><input type="radio" id="odpowiedz4.2" name="odpowiedz">W agencji NASA</label>
+                <label for="odpowiedz4.3"><input type="radio" id="odpowiedz4.3" name="odpowiedz">W laboratorium MIT</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Jak nazywa się aktualne, dynamiczne podejście do rozwoju specyfikacji HTML przez WHATWG?</span>
+                <label for="odpowiedz5.1"><input type="radio" id="odpowiedz5.1" name="odpowiedz">HTML Strict Standard</label>
+                <label for="odpowiedz5.2"><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">HTML Living Standard</label>
+                <label for="odpowiedz5.3"><input type="radio" id="odpowiedz5.3" name="odpowiedz">XHTML Core Standard</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Jak zachowa się przeglądarka internetowa, gdy napotka błąd składniowy w pliku HTML?</span>
+                <label for="odpowiedz6.1"><input type="radio" id="odpowiedz6.1" name="odpowiedz">Przerwie natychmiast pracę i wyświetli komunikat o błędzie kompilacji</label>
+                <label for="odpowiedz6.2"><input type="radio" id="odpowiedz6.2" name="odpowiedz" class="correct">Spróbuje naprawić strukturę w pamięci i wyświetli stronę najlepiej jak potrafi</label>
+                <label for="odpowiedz6.3"><input type="radio" id="odpowiedz6.3" name="odpowiedz">Całkowicie zignoruje uszkodzony plik źródłowy i pokaże pusty ekran</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Jak nazywa się wewnętrzne drzewo obiektów tworzone przez przeglądarkę podczas analizy HTML?</span>
+                <label for="odpowiedz7.1"><input type="radio" id="odpowiedz7.1" name="odpowiedz" class="correct">DOM (Document Object Model)</label>
+                <label for="odpowiedz7.2"><input type="radio" id="odpowiedz7.2" name="odpowiedz">CSSOM (CSS Object Model)</label>
+                <label for="odpowiedz7.3"><input type="radio" id="odpowiedz7.3" name="odpowiedz">API (Application Programming Interface)</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Co oznacza pojęcie „hipertekst” w nazwie języka HTML?</span>
+                <label for="odpowiedz8.1"><input type="radio" id="odpowiedz8.1" name="odpowiedz">Tekst, który jest przesyłany z bardzo wysoką prędkością sieciową</label>
+                <label for="odpowiedz8.2"><input type="radio" id="odpowiedz8.2" name="odpowiedz" class="correct">System dokumentów połączonych ze sobą za pomocą odsyłaczy (linków)</label>
+                <label for="odpowiedz8.3"><input type="radio" id="odpowiedz8.3" name="odpowiedz">Zaszyfrowany tekst niemożliwy do odczytania bez klucza dostępu</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Która grupa robocza została założona w 2004 r. przez twórców przeglądarek w opozycji do planów W3C?</span>
+                <label for="odpowiedz9.1"><input type="radio" id="odpowiedz9.1" name="odpowiedz">ECMA International</label>
+                <label for="odpowiedz9.2"><input type="radio" id="odpowiedz9.2" name="odpowiedz">IETF</label>
+                <label for="odpowiedz9.3"><input type="radio" id="odpowiedz9.3" name="odpowiedz" class="correct">WHATWG</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">W jakim celu pierwotnie zaprojektowano język HTML na początku lat 90.?</span>
+                <label for="odpowiedz10.1"><input type="radio" id="odpowiedz10.1" name="odpowiedz" class="correct">Do łatwego dzielenia się dokumentami naukowymi przez badaczy</label>
+                <label for="odpowiedz10.2"><input type="radio" id="odpowiedz10.2" name="odpowiedz">Do tworzenia zaawansowanych gier i animacji trójwymiarowych w sieci</label>
+                <label for="odpowiedz10.3"><input type="radio" id="odpowiedz10.3" name="odpowiedz">Do bezpiecznego szyfrowania transakcji i baz danych</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

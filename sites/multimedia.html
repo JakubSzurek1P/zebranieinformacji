@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#obrazy">Obrazy cyfrowe</a></li>
+            <li><a href="#audio">Formaty audio</a></li>
+            <li><a href="#video">Odtwarzanie wideo</a></li>
+            <li><a href="#osadzanie">Osadzanie obiektów</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Multimedia</h1>
+        
+        <h2 id="obrazy">Obrazy cyfrowe i znacznik img</h2>
+        <p>
+            Rozwój współczesnych stron internetowych nie byłby możliwy bez integracji elementów graficznych, które stanowią fundamentalną część multimediów. Podstawowym narzędziem do umieszczania statycznej oraz animowanej grafiki na stronie jest znacznik <code>&lt;img&gt;</code>. Jest to element samozamykający się, co oznacza, że nie posiada tradycyjnego znacznika zamykającego. Do jego prawidłowego funkcjonowania niezbędne są dwa kluczowe atrybuty: <code>src</code>, wskazujący ścieżkę do pliku źródłowego, oraz <code>alt</code>, zawierający tekst alternatywny wyświetlany w sytuacji, gdy plik nie może zostać załadowany, lub odczytywany przez czytniki ekranu dla osób niedowidzących. Współczesny HTML obsługuje wiele formatów plików graficznych, wśród których najpopularniejsze to JPEG, PNG, GIF, a także nowoczesne formaty takie jak WebP oraz AVIF, które oferują znacznie lepszą kompresję bez widocznej utraty jakości zasobów multimedialnych. Dodatkowo, za pomocą atrybutów <code>width</code> oraz <code>height</code> programista może jawnie określić wymiary renderowanego obrazu, co pozwala przeglądarce na zarezerwowanie odpowiedniej przestrzeni w układzie strony jeszcze przed pełnym pobraniem pliku, zapobiegając niepożądanym przesunięciom układu tekstu.
+        </p>
+
+        <h2 id="audio">Formaty audio i element audio</h2>
+        <p>
+            Kolejnym kluczowym komponentem multimedialnym na nowoczesnych witrynach internetowych jest dźwięk. Język HTML wprowadził dedykowany element <code>&lt;audio&gt;</code>, który umożliwia natywne odtwarzanie strumieni dźwiękowych bez konieczności instalowania zewnętrznych wtyczek. Podobnie jak w przypadku grafiki, podstawowym sposobem wskazania pliku dźwiękowego jest użycie atrybutu <code>src</code> bezpośrednio w znaczniku <code>&lt;audio&gt;</code> lub zastosowanie elastycznego podejścia z wewnętrznymi znacznikami <code>&lt;source&gt;</code>. To drugie rozwiązanie pozwala na zdefiniowanie kilku alternatywnych formatów plików, na przykład MP3, OGG lub WAV, dzięki czemu przeglądarka automatycznie wybierze pierwszy format, który potrafi zdekodować i obsłużyć. Do najważniejszych atrybutów sterujących zachowaniem odtwarzacza należą <code>controls</code>, który wymusza wyświetlenie domyślnego panelu sterowania z przyciskami odtwarzania, pauzy i regulacji głośności, a także <code>autoplay</code>, powodujący automatyczne uruchomienie dźwięku po załadowaniu strony. Ze względu na komfort użytkowników, nowoczesne przeglądarki często blokują działanie <code>autoplay</code>, jeśli dźwięk nie jest domyślnie wyciszony za pomocą atrybutu <code>muted</code>. Dodatkowo atrybut <code>loop</code> pozwala na zapętlenie odtwarzanego utworu.
+        </p>
+
+        <h2 id="video">Odtwarzanie wideo za pomocą znacznika video</h2>
+        <p>
+            Najbardziej angażującą formą multimediów w sieci jest ruchomy obraz wraz z dźwiękiem, realizowany za pomocą elementu <code>&lt;video&gt;</code>. Znacznik ten posiada strukturę bardzo zbliżoną do elementu dźwiękowego, oferując jednak dodatkowe możliwości konfiguracji warstwy wizualnej. Wewnątrz kontenera <code>&lt;video&gt;</code> również zaleca się stosowanie wielu znaczników <code>&lt;source&gt;</code> z różnymi formatami plików, takimi jak MP4, WebM czy OGG, aby zapewnić maksymalną kompatybilność z różnorodnymi przeglądarkami internetowymi i systemami operacyjnymi. Element ten akceptuje atrybuty <code>width</code> i <code>height</code>, które definiują fizyczny rozmiar odtwarzacza na ekranie. Bardzo przydatnym rozszerzeniem jest atrybut <code>poster</code>, który przyjmuje ścieżkę do pliku graficznego wyświetlanego jako miniatura filmu przed rozpoczęciem jego odtwarzania. Sterowanie odtwarzaniem wideo odbywa się za pomocą zestawu parametrów, takich jak <code>controls</code> do renderowania interfejsu użytkownika, <code>autoplay</code> do natychmiastowego startu, <code>muted</code> do wyciszenia ścieżki dźwiękowej oraz <code>loop</code> do ciągłego powtarzania materiału filmowego.
+        </p>
+
+        <h2 id="osadzanie">Osadzanie obiektów zewnętrznych przez embed i iframe</h2>
+        <p>
+            Poza natywnymi elementami dedykowanymi dla konkretnych typów mediów, specyfikacja HTML dostarcza uniwersalnych mechanizmów do osadzania zewnętrznych, interaktywnych zasobów oraz aplikacji internetowych. Jednym z najpopularniejszych rozwiązań jest znacznik <code>&lt;iframe&gt;</code>, będący skrótem od inline frame. Pozwala on na zagnieżdżenie całkowicie niezależnego dokumentu HTML pochodzącego z innej lokalizacji sieciowej wewnątrz bieżącej strony internetowej. Jest to powszechnie wykorzystywane do integracji zewnętrznych odtwarzaczy wideo z popularnych serwisów społecznościowych, map interaktywnych czy zewnętrznych systemów komentarzy. Znacznik <code>&lt;iframe&gt;</code> wymaga podania atrybutu <code>src</code> z adresem docelowym oraz opcjonalnych parametrów bezpieczeństwa, takich jak <code>sandbox</code>, który ogranicza uprawnienia skryptów wykonywanych wewnątrz ramki. Innym rozwiązaniem jest element <code>&lt;embed&gt;</code>, który służy jako uniwersalny kontener dla zewnętrznych aplikacji lub zasobów multimedialnych niebędących dokumentami HTML, wymagających dedykowanych wtyczek systemowych. Posiada on atrybuty <code>src</code> oraz <code>type</code>, określający typ MIME osadzanego zasobu. Współcześnie zaleca się jednak stosowanie bezpieczniejszych i bardziej elastycznych ramek oraz natywnych znaczników multimedialnych.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut znacznika &lt;img&gt; definiuje tekst alternatywny dla osób niedowidzących?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz">src</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz" class="correct">alt</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz">title</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Jaki element HTML służy do natywnego odtwarzania plików dźwiękowych bez zewnętrznych wtyczek?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">&lt;sound&gt;</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">&lt;audio&gt;</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">&lt;music&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służy atrybut poster w znaczniku &lt;video&gt;?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz" class="correct">Wyświetla grafikę jako miniaturę przed odtworzeniem filmu</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">Ustawia napisy końcowe filmu</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz">Dodaje ramkę ozdobną wokół odtwarzacza</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut wycisza dźwięk w elemencie &lt;video&gt; lub &lt;audio&gt;?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz">loop</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz">controls</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz" class="correct">muted</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Co umożliwia użycie kilku znaczników &lt;source&gt; wewnątrz &lt;video&gt;?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz">Odtwarzanie wielu filmów jednocześnie w jednym oknie</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">Zdefiniowanie alternatywnych formatów plików dla różnych przeglądarek</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">Dodanie efektów specjalnych 3D do materiału wideo</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Który z poniższych formatów graficznych jest uważany za nowoczesny format o wysokiej kompresji?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz" class="correct">WebP</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz">BMP</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">TIFF</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Jaki znacznik pozwala na osadzenie niezależnego dokumentu HTML z innego adresu wewnątrz strony?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz">&lt;embed&gt;</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz" class="correct">&lt;iframe&gt;</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz">&lt;object&gt;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Jaki atrybut logiczny sprawia, że plik wideo lub audio odtwarza się w pętli bez końca?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz" class="correct">loop</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz">autoplay</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">controls</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Czy znacznik &lt;img&gt; wymaga elementu zamykającego &lt;/img&gt;?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz">Tak, w każdej wersji języka HTML</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz" class="correct">Nie, jest to element samozamykający się</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz">Tak, ale tylko przy stosowaniu formatu SVG</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut zwiększa bezpieczeństwo podczas korzystania ze znacznika &lt;iframe&gt; poprzez ograniczenie uprawnień skryptów?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz">src</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz">controls</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz" class="correct">sandbox</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

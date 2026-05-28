@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#wprowadzenie">Wprowadzenie</a></li>
+            <li><a href="#pudelka-blokowe">Pudełka blokowe</a></li>
+            <li><a href="#pudelka-liniowe">Pudełka liniowe</a></li>
+            <li><a href="#display">Właściwość display</a></li>
+            <li><a href="#kontekst-bfc">Kontekst BFC</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Układ Pudełkowy</h1>
+        
+        <h2 id="wprowadzenie">Wprowadzenie do układu pudełkowego</h2>
+        <p>
+            Układ pudełkowy (box layout) w kontekście zaawansowanych specyfikacji CSS określa fundamentalne zasady, według których silnik renderujący przeglądarki generuje oraz rozmieszcza prostokątne struktury dla każdego elementu w drzewie dokumentu. Każdy obiekt staje się autonomicznym pudełkiem posiadającym określony typ zewnętrzny oraz wewnętrzny, co decyduje o jego interakcji z otaczającymi go komponentami oraz o sposobie formatowania jego zawartości podrzędnej. Zrozumienie mechaniki generowania pudełek oraz ich zachowania w naturalnym strumieniu (normal flow) jest kluczowe dla zachowania pełnej kontroli nad pozycjonowaniem elementów. Proces ten rozpoczyna się w momencie parsowania kodu strukturalnego, kiedy to przeglądarka przypisuje każdemu elementowi domyślny zestaw reguł wizualnych określających rolę strukturalną. Elementy nie są jedynie statycznymi kontenerami, lecz dynamicznymi strukturami uczestniczącymi w globalnym procesie kalkulacji współrzędnych ekranowych. Zasada działania tego systemu opiera się na separacji ról pomiędzy sposobem, w jaki pudełko współistnieje z innymi elementami w tej samej linii lub kolumnie, a sposobem, w jaki zarządza swoimi własnymi dziećmi. Projektant posługujący się nowoczesnymi arkuszami stylów musi precyzyjnie operować pojęciem generowania pudełek, aby uniknąć nieprzewidywalnych przesunięć interfejsu.
+        </p>
+
+        <h2 id="pudelka-blokowe">Pudełka blokowe w strukturze</h2>
+        <p>
+            Pudełka o charakterystyce blokowej reprezentują elementy, które domyślnie zajmują całą dostępną szerokość swojego kontenera nadrzędnego, rozciągając się od lewej do prawej krawędzi przestrzeni roboczej. Ich najbardziej charakterystyczną cechą jest to, że wymuszają przejście do nowej linii zarówno przed swoim rozpoczęciem, jak i po swoim zakończeniu, tworząc wyraźne pionowe bloki w układzie dokumentu. W architekturze układu pudełkowego, elementy blokowe stanowią główny szkielet konstrukcyjny, na którym opierają się inne, mniejsze komponenty. Pudełko blokowe w pełni respektuje wszelkie narzucone odgórnie ograniczenia przestrzenne, a jego wysokość dostosowuje się automatycznie do objętości zawartego w nim tekstu bądź innych zagnieżdżonych obiektów, o ile nie zostanie zdefiniowana w sposób sztywny. Istotnym aspektem zachowania tego typu pudełek jest ich dominacja w strukturze pionowej, co oznacza, że dwa sąsiadujące ze sobą elementy blokowe zawsze zostaną umieszczone jeden pod drugim, tworząc logiczny ciąg sekwencyjny. Silnik przeglądarki traktuje je jako niezależne jednostki organizacyjne, które mogą zawierać w sobie zarówno inne pudełka blokowe, jak i elementy o charakterze liniowym.
+        </p>
+
+        <h2 id="pudelka-liniowe">Pudełka liniowe i ich specyfika</h2>
+        <p>
+            W przeciwieństwie do struktur blokowych, pudełka liniowe (inline) nie powodują przełamania linii i są renderowane bezpośrednio wewnątrz bieżącego wiersza tekstu, płynnie dopasowując się do otaczającej treści. Their głównym przeznaczeniem jest formatowanie i wyróżnianie konkretnych fragmentów tekstu bez naruszania ogólnego układu akapitu. Pudełko liniowe charakteryzuje się unikalną geometrią w układzie pudełkowym, ponieważ jego szerokość oraz wysokość wynikają bezpośrednio i wyłącznie z gabarytów jego zawartości wewnętrznej. Próby wymuszenia stałych wymiarów poziomych lub pionowych za pomocą standardowych deklaracji geometrycznych zostaną przez przeglądarkę zignorowane, co jest całkowicie naturalnym zachowaniem w tym modelu. Ponadto, specyfika elementów liniowych sprawia, że w przypadku osiągnięcia krawędzi kontenera, pudełko to może zostać automatycznie podzielone na kilka części i przeniesione do kolejnego wiersza, zachowując jednak spójność logiczną tekstu. Wszelkie pionowe modyfikacje przestrzeni wokół takiego pudełka nie wpływają na pozycję sąsiednich linii tekstu, co odróżnia je diametralnie od zachowania struktur blokowych i wymaga od programisty dużej ostrożności podczas projektowania interfejsów tekstowych.
+        </p>
+
+        <h2 id="display">Sterowanie typem pudełka za pomocą właściwości display</h2>
+        <p>
+            Współczesne kaskadowe arkusze stylów oferują niezwykle potężne narzędzie transformacji strukturalnej w postaci właściwości <code>display</code>, która pozwala na całkowitą zmianę domyślnego zachowania i typu generowanego pudełka. Dzięki tej komendzie programista może sprawić, że element z natury blokowy zacznie zachowywać się jak element liniowy i odwrotnie, co daje nieograniczone możliwości adaptacji kodu. Jedną z najbardziej użytecznych i powszechnie stosowanych konfiguracji jest wartość <code>inline-block</code>, która tworzy hybrydowe pudełko łączące najlepsze cechy obu podstawowych modeli. Pudełko typu <code>inline-block</code> układa się w jednym wierszu wraz z sąsiadującym tekstem i innymi elementami liniowymi, lecz jednocześnie pozwala na pełne i precyzyjne definiowanie wymiarów szerokości oraz wysokości. Inną skrajną opcją jest wartość <code>none</code>, która całkowicie usuwa element z układu pudełkowego, sprawiając, że przeglądarka w ogóle nie generuje dla niego żadnego pudełka, a przestrzeń, którą pierwotnie zajmował, zostaje natychmiast zaabsorbowana przez pozostałe komponenty strony. Nowoczesna specyfikacja dzieli tę właściwość na dwa poziomy deklaracji, umożliwiając niezależne sterowanie zewnętrznym sposobem prezentacji oraz wewnętrzną strategią układu dla elementów podrzędnych.
+        </p>
+
+        <h2 id="kontekst-bfc">Konteksty formatowania bloku</h2>
+        <p>
+            Niezwykle zaawansowanym i kluczowym pojęciem w układzie pudełkowym jest Block Formatting Context, czyli kontekst formatowania bloku, stanowiący odizolowane środowisko renderowania na stronie internetowej. Wewnątrz tak zdefiniowanego obszaru pudełka są rozmieszczane według ściśle określonych reguł, a ich interakcje zewnętrzne zostają całkowicie odcięte od reszty dokumentu. Kontekst formatowania bloku chroni wewnętrzny układ przed wpływem elementów pływających oraz zapobiega niepożądanemu zjawisku zapadania się zewnętrznych granic przestrzennych. Istnieje wiele metod wymuszenia utworzenia takiego odizolowanego kontekstu, wśród których wymienić można zastosowanie odpowiednich wartości zarządzania przepełnieniem treści, takich jak <code>overflow: hidden</code> lub <code>overflow: auto</code>. Każde pudełko znajdujące się wewnątrz takiego kontekstu jest pozycjonowane z absolutną precyzją, a jego lewa krawędź dotyka lewej krawędzi kontenera nadrzędnego. Zrozumienie tej izolacji pozwala na bezproblemowe rozwiązywanie skomplikowanych problemów z nakładaniem się warstw oraz niekontrolowanymi przesunięciami elementów, co podnosi jakość i stabilność całego layoutu.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Co określa zewnętrzny typ układu pudełkowego elementu?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz" class="correct">Sposób, w jaki pudełko współpracuje z sąsiadującymi elementami w strumieniu</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz">Sposób rozplanowania elementów podrzędnych wewnątrz tego pudełka</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz">Dokładną grubość ramek zewnętrznych obiektu</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Jak zachowuje się domyślne pudełko blokowe w poziomie?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">Zajmuje tylko tyle miejsca, ile wynosi szerokość jego tekstu</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">Rozciąga się automatycznie na całą dostępną szerokość kontenera nadrzędnego</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">Zawsze dopasowuje się do połowy szerokości okna przeglądarki</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Która cecha najlepiej opisuje zachowanie pudełek liniowych (inline)?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz">Wymuszają przejście do nowej linii po swoim zakończeniu</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">Pozwalają na sztywne określenie szerokości za pomocą właściwości width</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz" class="correct">Są układane bezpośrednio w wierszu tekstu i mogą być dzielone przy krawędzi kontenera</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Co dzieje się z wymiarami width i height w przypadku czystego elementu liniowego?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz" class="correct">Są ignorowane przez silnik renderujący przeglądarki</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz">Są podwajane w celu dopasowania do linii tekstu</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz">Służą do określenia minimalnego marginesu wewnętrznego</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Jaka wartość właściwości display tworzy hybrydowe pudełko akceptujące wymiary, lecz układane w linii?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz">block</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">inline-block</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">none</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Czym skutkuje zastosowanie deklaracji display: none; na elemencie?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz">Element staje się przezroczysty, ale zachowuje swoje miejsce w układzie</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz" class="correct">Pudełko nie jest w ogóle generowane, a element całkowicie znika z układu strony</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">Zamienia typ pudełka na domyślny kontener tekstowy</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Czym jest skrót BFC w zaawansowanej analizie układu pudełkowego?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz" class="correct">Block Formatting Context (Kontekst formatowania bloku)</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz">Box Framework Control (Sterowanie strukturą pudełka)</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz">Border Flex Cascade (Kaskada elastycznych krawędzi)</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Która z poniższych właściwości może wymusić utworzenie nowego kontekstu BFC?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz" class="correct">overflow: hidden</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz">font-size: 16px</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">color: inherit</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">How pozycjonowane są elementy wewnątrz izolowanego środowiska BFC?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz">Są całkowicie zależne od zewnętrznych elementów pływających na stronie</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz" class="correct">Ich interakcje zewnętrzne są odcięte, a reguły układu stosowane są autonomicznie wewnątrz kontenera</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz">Zawsze układają się po przekątnej kontenera nadrzędnego</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Gdzie domyślnie lądują kolejne pudełka blokowe umieszczone w kodzie HTML?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz" class="correct">Są rozmieszczane pionowo, jedno pod drugim</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz">Są automatycznie wyrównywane do prawego marginesu ekranu</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz">Nakładają się na siebie w osi Z, tworząc warstwy</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#podstawy">Podstawowa składnia</a></li>
+            <li><a href="#sciezki">Ścieżki dostępu</a></li>
+            <li><a href="#atrybuty">Atrybut target</a></li>
+            <li><a href="#specjalne">Kotwice i protokoły</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Hiperłącza</h1>
+        
+        <h2 id="podstawy">Podstawowa składnia i znaczenie atrybutu href</h2>
+        <p>
+            Hiperłącza stanowią absolutny fundament oraz esencję działania całej sieci World Wide Web, umożliwiając intuicyjne i szybkie łączenie ze sobą różnych dokumentów elektronicznych w jedną, globalną, gigantyczną sieć powiązanych informacji. Głównym elementem strukturalnym odpowiedzialnym za bezbłędne tworzenie odnośników w języku HTML jest znacznik liniowy <code>&lt;a&gt;</code>, którego nazwa stanowi bezpośredni skrót od angielskiego słowa "anchor", czyli kotwica. Sam znacznik otwierający i zamykający nie spełni jednak swojej roli użytkowej bez przypisania mu kluczowego atrybutu, jakim jest bezwzględnie atrybut <code>href</code> (będący skrótem od hypertext reference). Atrybut ten precyzyjnie wskazuje docelowy adres URL lub lokalizację zasobu, pod który użytkownik zostanie natychmiastowo przekierowany po kliknięciu w treść umieszczoną pomiędzy znacznikami. Tekst znajdujący się wewnątrz odnośnika jest często profesjonalnie nazywany tekstem kotwicy (anchor text) i według powszechnie obowiązujących zasad powinien w jasny oraz zrozumiały sposób opisywać, dokąd dokładnie prowadzi dany link. Współczesne przeglądarki internetowe domyślnie wyróżniają aktywne hiperłącza kolorem niebieskim oraz wyraźnym podkreśleniem, a po najechaniu na nie kursorem myszy zmienia się on automatycznie w charakterystyczną ikonę dłoni. Odnośnik może otaczać nie tylko zwykły tekst, ale również inne rozbudowane elementy strukturalne witryny. Bez poprawnego zastosowania atrybutu <code>href</code> znacznik <code>&lt;a&gt;</code> staje się jedynie zwykłym kontenerem tekstowym, który nie wykazuje żadnych interaktywnych właściwości sieciowych.
+        </p>
+
+        <h2 id="sciezki">Adresowanie bezwzględne oraz ścieżki względne</h2>
+        <p>
+            Podczas definiowania celu hiperłącza w atrybucie <code>href</code> każdy programista tworzący strony internetowe ma do dyspozycji dwa główne sposoby określania dokładnej lokalizacji zasobu: ścieżki bezwzględne oraz ścieżki względne. Adresowanie bezwzględne wymaga każdorazowo podania pełnego, kompletnego adresu URL, zawierającego odpowiedni protokół sieciowy, taki jak na przykład bezpieczny protokół <code>https://</code> lub starszy <code>http://</code>, a także pełną domenę oraz dokładną, szczegółową ścieżkę do konkretnego pliku znajdującego się na serwerze zewnętrznym. Tego typu zaawansowane rozwiązanie adresowania stosuje się głównie do efektywnego linkowania do zupełnie zewnętrznych serwisów internetowych, na których zawartość twórca witryny nie ma żadnego bezpośredniego wpływu. Z kolei ścieżki względne odnoszą się bezpośrednio do aktualnej struktury katalogów i plików naszego własnego projektu umieszczonego na serwerze. W tym konkretnym przypadku jedynym punktem odniesienia jest fizyczna lokalizacja pliku HTML, w którym aktualnie się znajdujemy i piszemy kod. Jeśli chcemy odwołać się do pliku znajdującego się w tym samym folderze, wpisujemy po prostu jego kompletną nazwę. Gdy dokument docelowy znajduje się w folderze o poziom wyższym, stosujemy powszechny zapis <code>../</code>, który pozwala na sprawne cofnięcie się w strukturze. Używanie ścieżek względnych jest kluczowe dla zachowania mobilności całego projektu programistycznego.
+        </p>
+
+        <h2 id="atrybuty">Kontrola zachowania linków za pomocą atrybutu target</h2>
+        <p>
+            Standardowo i domyślnie kliknięcie w dowolny odnośnik powoduje natychmiastowe załadowanie nowej strony internetowej w tym samym oknie lub karcie przeglądarki, co automatycznie prowadzi do opuszczenia aktualnie przeglądanej przez użytkownika treści. Aby w pełni kontrolować oraz modyfikować to zachowanie, stosuje się opcjonalny, ale niezwykle przydatny atrybut o nazwie <code>target</code>. Najpopularniejszą i najchętniej używaną wartością tego atrybutu we współczesnym projektowaniu stron jest wartość <code>_blank</code>. Powoduje ona, że wskazany dokument docelowy otwiera się w zupełnie nowej, czystej karcie lub osobnym oknie przeglądarki internetowej, co w konsekwencji pozwala użytkownikowi zachować otwartą stronę źródłową. Jest to bardzo ceniona i rekomendowana praktyka podczas odsyłania do zewnętrznych artykułów, dokumentacji technicznych czy materiałów pomocniczych. Warto jednak pamiętać o istotnych kwestiach bezpieczeństwa sieciowego – otwarcie linku z wartością <code>_blank</code> bez dodatkowych atrybutów zabezpieczających może narazić naszą stronę na groźne ataki. Innymi wartościami tego parametru, choć znacznie rzadziej stosowanymi we współczesnym programowaniu, są wartości <code>_self</code>, która stanowi domyślne zachowanie systemu, a także <code>_parent</code> oraz <code>_top</code>. Prawidłowe zarządzanie sposobem otwierania linków ma ogromny wpływ na ogólną wygodę użytkownika witryny.
+        </p>
+
+        <h2 id="specjalne">Odnośniki wewnątrzstronowe oraz protokoły specjalne</h2>
+        <p>
+            Hiperłącza w języku HTML pozwalają na sprawną nawigację nie tylko pomiędzy zupełnie osobnymi dokumentami, ale również w obrębie tej samej, pojedynczej podstrony internetowej. Służą do tego tak zwane kotwice wewnątrzstronowe, które ułatwiają przemieszczanie się po długich artykułach. Aby stworzyć taki funkcjonalny odnośnik, należy w atrybucie <code>href</code> podać na samym początku charakterystyczny znak hashtaga <code>#</code>, a zaraz po nim wpisać unikalny identyfikator elementu, do którego chcemy automatycznie przewinąć widok okna strony. Warunkiem koniecznym do prawidłowego działania tego mechanizmu jest istnienie na stronie elementu docelowego posiadającego dokładnie taki sam identyfikator przypisany w swoim kodzie. Tego typu rozwiązanie nawigacyjne jest powszechnie i masowo wykorzystywany przy tworzeniu automatycznych spisów treści, bocznych menu nawigacyjnych oraz przydatnych przycisków szybkiego powrotu na samą górę strony. Oprócz tradycyjnych adresów URL i wewnętrznych kotwic, język HTML bezproblemowo obsługuje również specjalne protokoły komunikacyjne o charakterze użytkowym. Przykładowo, użycie specyficznego zapisu <code>mailto:</code> wewnątrz atrybutu <code>href</code> pozwala na natychmiastowe uruchomienie domyślnego programu pocztowego użytkownika z automatycznie uzupełnionym adresem e-mail odbiorcy wiadomości. Podobnie działa przydatny protokół <code>tel:</code>, który inicjuje połączenie telefoniczne.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Który atrybut elementu &lt;a&gt; określa adres docelowy hiperłącza?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz" class="correct">Atrybut href</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz">Atrybut src</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz">Atrybut target</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Jaka wartość atrybutu target powoduje otwarcie linku w nowej karcie?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">Wartość _self</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">Wartość _blank</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">Wartość _top</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Co oznacza zapis "../" na początku ścieżki względnej?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz">Przejście do głównego katalogu domeny zewnętrznej</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">Wejście do podfolderu o nazwie podanej dalej</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz" class="correct">Cofnięcie się o jeden poziom wyżej w strukturze katalogów</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Który protokół pozwala na stworzenie odnośnika uruchamiającego program pocztowy?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz" class="correct">Protokół mailto:</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz">Protokół tel:</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz">Protokół http:</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Jaki znak rozpoczyna wartość atrybutu href przy tworzeniu odnośnika wewnątrzstronowego (kotwicy)?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz">Znak ukośnika /</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz" class="correct">Znak hashtaga #</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">Znak pytajnika ?</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Czym charakteryzuje się bezwzględna ścieżka dostępu w hiperłączu?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz" class="correct">Zawiera pełny adres URL wraz z protokołem i nazwą domeny</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz">Odnosi się wyłącznie do struktury plików lokalnego folderu projektu</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">Działa wyłącznie w obrębie tego samego dokumentu tekstowego</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Który protokół pozwala zainicjować połączenie telefoniczne na urządzeniu mobilnym?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz">Protokół call:</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz">Protokół phone:</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz" class="correct">Protokół tel:</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Od jakiego słowa pochodzi nazwa znacznika &lt;a&gt; służącego do budowy hiperłączy?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz">Od angielskiego słowa address</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz" class="correct">Od angielskiego słowa anchor</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">Od angielskiego słowa application</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Co się stanie, jeśli znacznik &lt;a&gt; nie będzie posiadał żadnego atrybutu href?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz">Przeglądarka zgłosi błąd krytyczny i zatrzyma działanie strony</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz">Przekieruje automatycznie użytkownika na stronę główną domeny</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz" class="correct">Stanie się zwykłym kontenerem tekstowym pozbawionym interakcji</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Które elementy mogą być otoczone znacznikiem &lt;a&gt; w celu stworzenia z nich linku?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz" class="correct">Zarówno tekst, jak i inne elementy strukturalne</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz">Wyłącznie czysty tekst nieposiadający żadnych innych znaczników</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz">Wyłącznie pliki stylów CSS umieszczone bezpośrednio na stronie</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>

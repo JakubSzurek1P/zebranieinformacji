@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Podsumowanie wiadomości z HTML-a">
+    <meta name="author" content="Jakub Szurek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/arkuszMeyera.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/darkTheme.css">
+    <link rel="stylesheet" href="../style/mainStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Samouczek HTML, CSS</title>
+</head>
+<body>
+<header>
+    <a id="title" href="wstepDoHTML.html">Samouczek</a>
+    <div class="nav-sentinel"></div>
+    <nav id="horizontal-menu">
+        <ul>
+            <li><a href="wstepDoHTML.html">Wstęp do HTML</a></li>
+            <li><a href="strukturaHTML.html">Struktura HTML</a></li>
+            <li><a href="hiperlacza.html">Hiperłącza</a></li>
+            <li><a href="listy.html">Listy</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="tabele.html">Tabele</a></li>
+            <li><a href="formularze.html">Formularze</a></li>
+            <li><a href="wstepDoCSS.html">Wstęp do CSS</a></li>
+            <li><a href="formatowanie.html">Formatowanie tekstu, tło</a></li>
+            <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+            <li><a href="ukladStrony.html">Układ strony</a></li>
+            <li><a href="dobrePraktyki.html">Dobre praktyki, walidacja</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <nav id="vertical-menu">
+        <ul>
+            <li><a href="#czcionki">Formatowanie czcionki</a></li>
+            <li><a href="#tekst">Efekty i wyrównanie</a></li>
+            <li><a href="#tlo-kolor">Kolor tła</a></li>
+            <li><a href="#tlo-obrazy">Obrazy tła</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Formatowanie tekstu, tło</h1>
+        
+        <h2 id="czcionki">Formatowanie właściwości czcionki</h2>
+        <p>
+            Kaskadowe Arkusze Stylów oferują niezwykle bogaty wachlarz właściwości służących do dokładnego kontrolowania wyglądu typografii na nowoczesnej stronie internetowej. Sercem każdego projektu związanego z tekstem jest właściwość <code>font-family</code>, która pozwala programiście zdefiniować listę preferowanych krojów pisma dla wybranego elementu. Bezpieczną praktyką jest podawanie wielu nazw rozdzielonych przecinkami, kończąc całą listę tak zwaną rodziną generyczną, na przykład <code>sans-serif</code> lub <code>serif</code>, co gwarantuje w pełni poprawne wyświetlenie tekstu nawet w specyficznej sytuacji, gdy system operacyjny użytkownika nie posiada zainstalowanej czcionki głównej. Kolejną niezwykle ważną i powszechną właściwością jest <code>font-size</code>, określająca fizyczny lub relatywny rozmiar tekstu. Projektanci stron internetowych mogą stosować tutaj jednostki absolutne, takie jak powszechnie znane piksele <code>px</code>, bądź elastyczne jednostki relatywne, na przykład <code>em</code> oraz <code>rem</code>, które są wysoce rekomendowane ze względu na korzyści związane z dostępnością cyfrową i bezproblemowym skalowaniem witryn na rozmaitych urządzeniach mobilnych. Do precyzyjnego kontrolowania grubości poszczególnych znaków służy właściwość <code>font-weight</code>, przyjmująca wartości słowne, takie jak <code>bold</code> czy <code>normal</code>, lub wartości numeryczne w zakresie od stu do dziewięciuset. Z kolei właściwość <code>font-style</code> umożliwia sprawne pochylenie tekstu za pomocą wartości <code>italic</code>, co jest powszechnie wykorzystywane przy wyróżnianiu cytatów lub ważnych pojęć wewnątrz akapitów.
+        </p>
+
+        <h2 id="tekst">Wyrównanie i zaawansowane efekty tekstowe</h2>
+        <p>
+            Oprócz modyfikacji samej struktury czcionki, język CSS udostępnia kompletny zestaw narzędzi do zaawansowanej manipulacji całym blokiem tekstu oraz odstępami między poszczególnymi elementami graficznymi. Kluczową funkcję odgrywa tutaj właściwość <code>text-align</code>, sterująca wyrównaniem tekstu w poziomie. Może ona przyjmować wartości takie jak <code>left</code>, <code>right</code>, <code>center</code> oraz <code>justify</code>, przy czym ta ostatnia rozciąga tekst równomiernie między lewym a prawym marginesem bloku. Aby dodać lub usunąć dekoracje wizualne, stosuje się właściwość <code>text-decoration</code>, niezwykle przydatną do usuwania domyślnego podkreślenia z hiperłączy poprzez przypisanie wartości <code>none</code>, bądź dodawania linii za pomocą <code>underline</code> lub <code>line-through</code>. Transformację wielkości liter realizuje właściwość <code>text-transform</code>, oferująca wartości <code>uppercase</code> zmieniającą wszystkie litery na wielkie oraz <code>lowercase</code> wymuszającą małe litery. Istotny wpływ na ogólną czytelność ma również właściwość <code>line-height</code>, regulująca interlinię, czyli pionowy odstęp między wierszami tekstu, oraz właściwość <code>letter-spacing</code>, kontrolująca odległości między pojedynczymi znakami, co pozwala na tworzenie unikalnych układów nagłówkowych.
+        </p>
+
+        <h2 id="tlo-kolor">Zarządzanie kolorem tekstu i tła elementu</h2>
+        <p>
+            Wizualny odbiór każdej profesjonalnej strony internetowej zależy w ogromnym stopniu od odpowiednio dobranej kolorystyki tekstu oraz elementów podkładu. Do określenia barwy samej czcionki używa się prostej właściwości <code>color</code>. Kolory można definiować na kilka sposobów: za pomocą tradycyjnych nazw słownych, zapisów szesnastkowych typu <code>hex</code>, a także zaawansowanych modeli <code>rgb</code> lub <code>rgba</code>, gdzie dodatkowy kanał alfa pozwala na precyzyjne określenie stopnia przezroczystości tekstu. Z kolei do modyfikacji tła dowolnego elementu blokowego bądź liniowego służy uniwersalna właściwość <code>background-color</code>. Wypełnienie tła jednolitym kolorem stanowi fundament projektowania warstwowego, zapewniając odpowiedni kontrast między tekstem a podłożem, co jest krytycznym czynnikiem spełniającym współczesne standardy użyteczności. Warto pamiętać, że właściwość ta domyślnie przyjmuje wartość <code>transparent</code>, co oznacza, że element jest całkowicie przezroczysty i ukazuje tło swojego bezpośredniego rodzica w strukturze drzewa dokumentu HTML.
+        </p>
+
+        <h2 id="tlo-obrazy">Zaawansowane operacje z obrazami tła</h2>
+        <p>
+            Gdy jednolity kolor okazuje się niewystarczający do realizacji profesjonalnej wizji artystycznej, język CSS pozwala na łatwą implementację zaawansowanych grafik za pomocą właściwości <code>background-image</code>, która przyjmuje funkcję <code>url()</code> wskazującą ścieżkę do pliku graficznego. Domyślnie wgrany obraz powtarza się w pionie i poziomie, zapełniając całą dostępną przestrzeń elementu. Aby nad tym zjawiskiem w pełni zapanować, stworzono właściwość <code>background-repeat</code>, mogącą całkowicie zablokować powtarzanie wartością <code>no-repeat</code>, lub ograniczyć je do jednej osi za pomocą <code>repeat-x</code> lub <code>repeat-y</code>. Niezbędną kontrolę nad pozycjonowaniem grafiki daje właściwość <code>background-position</code>, akceptująca słowa kluczowe takie jak <code>top</code>, <code>bottom</code>, <code>center</code>, <code>left</code>, <code>right</code> bądź precyzyjne wartości liczbowe i procentowe. Kluczowym elementem nowoczesnego projektowania responsywnego jest jednak właściwość <code>background-size</code>, decydująca o ostatecznym rozmiarze wyświetlanego obrazu. Wartość <code>cover</code> perfekcyjnie skaluje grafikę, aby całkowicie zakryła element bez zniekształcania proporcji, podczas gdy wartość <code>contain</code> dopasowuje obraz tak, by był w całości widoczny wewnątrz ramki elementu.
+        </p>
+    </section>
+    <div id="quizDiv">
+        <span class="sprawdzSie">Sprawdź się!</span>
+        
+        <div id="pytanie1" class="pytanie">
+            <form id="quizForm1" onsubmit="return false">
+                <span class="jakiePytanie">Która właściwość CSS odpowiada za definicję kroju czcionki?</span>
+                <label for="odpowiedz1.1" ><input type="radio" id="odpowiedz1.1" name="odpowiedz">font-style</label>
+                <label for="odpowiedz1.2" ><input type="radio" id="odpowiedz1.2" name="odpowiedz" class="correct">font-family</label>
+                <label for="odpowiedz1.3" ><input type="radio" id="odpowiedz1.3" name="odpowiedz">font-weight</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie2" class="pytanie">
+            <form id="quizForm2" onsubmit="return false">
+                <span class="jakiePytanie">Które z wymienionych jednostek rozmiaru czcionki są jednostkami relatywnymi?</span>
+                <label for="odpowiedz2.1" ><input type="radio" id="odpowiedz2.1" name="odpowiedz">px</label>
+                <label for="odpowiedz2.2" ><input type="radio" id="odpowiedz2.2" name="odpowiedz" class="correct">em oraz rem</label>
+                <label for="odpowiedz2.3" ><input type="radio" id="odpowiedz2.3" name="odpowiedz">cm</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie3" class="pytanie">
+            <form id="quizForm3" onsubmit="return false">
+                <span class="jakiePytanie">Jaka wartość właściwości font-weight oznacza standardowe pogrubienie tekstu?</span>
+                <label for="odpowiedz3.1" ><input type="radio" id="odpowiedz3.1" name="odpowiedz" class="correct">bold</label>
+                <label for="odpowiedz3.2" ><input type="radio" id="odpowiedz3.2" name="odpowiedz">normal</label>
+                <label for="odpowiedz3.3" ><input type="radio" id="odpowiedz3.3" name="odpowiedz">italic</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie4" class="pytanie">
+            <form id="quizForm4" onsubmit="return false">
+                <span class="jakiePytanie">Do czego służy właściwość font-style z przypisaną wartością italic?</span>
+                <label for="odpowiedz4.1" ><input type="radio" id="odpowiedz4.1" name="odpowiedz">Do podkreślenia tekstu</label>
+                <label for="odpowiedz4.2" ><input type="radio" id="odpowiedz4.2" name="odpowiedz">Do zwiększenia rozmiaru liter</label>
+                <label for="odpowiedz4.3" ><input type="radio" id="odpowiedz4.3" name="odpowiedz" class="correct">Do pochylenia tekstu (kursywy)</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie5" class="pytanie">
+            <form id="quizForm5" onsubmit="return false">
+                <span class="jakiePytanie">Która właściwość odpowiada za poziome wyrównanie bloku tekstu?</span>
+                <label for="odpowiedz5.1" ><input type="radio" id="odpowiedz5.1" name="odpowiedz" class="correct">text-align</label>
+                <label for="odpowiedz5.2" ><input type="radio" id="odpowiedz5.2" name="odpowiedz">text-decoration</label>
+                <label for="odpowiedz5.3" ><input type="radio" id="odpowiedz5.3" name="odpowiedz">line-height</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie6" class="pytanie">
+            <form id="quizForm6" onsubmit="return false">
+                <span class="jakiePytanie">Jak brzmi poprawna deklaracja usuwająca domyślne podkreślenie z hiperłączy?</span>
+                <label for="odpowiedz6.1" ><input type="radio" id="odpowiedz6.1" name="odpowiedz">text-transform: none;</label>
+                <label for="odpowiedz6.2" ><input type="radio" id="odpowiedz6.2" name="odpowiedz" class="correct">text-decoration: none;</label>
+                <label for="odpowiedz6.3" ><input type="radio" id="odpowiedz6.3" name="odpowiedz">font-style: normal;</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie7" class="pytanie">
+            <form id="quizForm7" onsubmit="return false">
+                <span class="jakiePytanie">Która wartość właściwości text-transform zmienia wszystkie litery tekstu na wielkie?</span>
+                <label for="odpowiedz7.1" ><input type="radio" id="odpowiedz7.1" name="odpowiedz" class="correct">uppercase</label>
+                <label for="odpowiedz7.2" ><input type="radio" id="odpowiedz7.2" name="odpowiedz">lowercase</label>
+                <label for="odpowiedz7.3" ><input type="radio" id="odpowiedz7.3" name="odpowiedz">capitalize</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie8" class="pytanie">
+            <form id="quizForm8" onsubmit="return false">
+                <span class="jakiePytanie">Co określa właściwość line-height?</span>
+                <label for="odpowiedz8.1" ><input type="radio" id="odpowiedz8.1" name="odpowiedz">Odstępy między poszczególnymi znakami</label>
+                <label for="odpowiedz8.2" ><input type="radio" id="odpowiedz8.2" name="odpowiedz" class="correct">Interlinię (pionowy odstęp między wierszami)</label>
+                <label for="odpowiedz8.3" ><input type="radio" id="odpowiedz8.3" name="odpowiedz">Maksymalną szerokość całego bloku</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie9" class="pytanie">
+            <form id="quizForm9" onsubmit="return false">
+                <span class="jakiePytanie">Jaka domyślna wartość jest przypisana do właściwości background-color?</span>
+                <label for="odpowiedz9.1" ><input type="radio" id="odpowiedz9.1" name="odpowiedz" class="correct">transparent</label>
+                <label for="odpowiedz9.2" ><input type="radio" id="odpowiedz9.2" name="odpowiedz">white</label>
+                <label for="odpowiedz9.3" ><input type="radio" id="odpowiedz9.3" name="odpowiedz">none</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="pytanie10" class="pytanie">
+            <form id="quizForm10" onsubmit="return false">
+                <span class="jakiePytanie">Która wartość właściwości background-size skaluje obraz tak, aby w pełni pokrył tło bez zniekształceń?</span>
+                <label for="odpowiedz10.1" ><input type="radio" id="odpowiedz10.1" name="odpowiedz">contain</label>
+                <label for="odpowiedz10.2" ><input type="radio" id="odpowiedz10.2" name="odpowiedz" class="correct">cover</label>
+                <label for="odpowiedz10.3" ><input type="radio" id="odpowiedz10.3" name="odpowiedz">stretch</label>
+                <button type="submit">Następne pytanie</button>
+            </form>
+        </div>
+
+        <div id="quizKoniec">
+            <p class="wynik">Twój wynik:</p><p class="punkty"><span id="liczbaPunktow"></span>/10</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>© 2026 Jakub Szurek</p>
+</footer>
+<script src="../dist/index.js"></script>
+<script src="../dist/quiz.js"></script>
+<script src="../dist/sticky.js"></script>
+</body>
+</html>
