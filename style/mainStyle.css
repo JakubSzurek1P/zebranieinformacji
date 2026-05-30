@@ -27,7 +27,6 @@ header{
     border-top: 2px solid var(--borders-dividers);
     border-bottom: 2px solid var(--borders-dividers);
     background-color: var(--backgroud);
-
 }
 
 #horizontal-menu a, #horizontal-menu li{
@@ -38,8 +37,9 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-#horizontal-menu a{
+#horizontal-menu a, #phone li{
     padding: .5em;
     color: var(--secondary-text);
     text-decoration: none;
@@ -55,6 +55,9 @@ header{
 #horizontal-menu.stuck{
     position: fixed;
     top: 0;
+}
+#phone{
+    display: none !important;
 }
 main{
     display: grid;
@@ -75,7 +78,6 @@ main > *{
 
 #vertical-menu{
     position: sticky;
-    top: 3.5em;
     background-color: color(from var(--backgroud) srgb .13 .13 .13);
     border-radius: 10px;
     padding: .5em;

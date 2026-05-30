@@ -1,0 +1,36 @@
+@media screen and (max-width: 600px) {
+    header ul:not(#phone){
+        display: none;
+    }
+    #phone{
+        display: flex !important;
+    }
+    #phone li{
+        position: relative;
+    }
+    #phone li:hover .inside{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        z-index: 1;
+        background-color: color(from var(--backgroud) srgb .1 .1 .1);
+        padding: 1em;
+        border-radius: 10px;
+        top: 31px;
+        left: 0;
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    #vertical-menu{
+        grid-area: 1/1/1/1;
+        position: unset;
+    }
+    section{
+        grid-area: 2/1/2/1;
+    }
+    #quizDiv{
+        grid-area: 3/1/3/1;
+    }
+
+}
